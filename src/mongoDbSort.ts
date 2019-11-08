@@ -17,7 +17,7 @@ function getMongoDbSort(sort: SortArg): MongoDbSort {
         .reduce((agg, key) => {
             const value = sort[key];
 
-            if (typeof value === 'number') {
+            if (typeof value === 'string') {
                 return { ...agg, [key]: value }
             }
 
